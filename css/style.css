@@ -3,7 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  /* Variables Couleurs */
+  --green_primary: #01762F;
+  --green_secondary: #08ae37;
+  --black: #000000;
+  --white: #ffffff;
 
+}
 /* Header */
 
 header {
@@ -32,12 +39,12 @@ nav li ul a {
   font-size: 1rem;
   text-decoration: none;
   font-weight: 900;
-  color: #000;
+  color: var(--black);
   display: inline-block;
 }
 
 nav li ul a :hover {
-  color: #01762F;
+  color: var(--green_primary);
 }
 
 /* Titre - Logo - bouton menu */
@@ -51,7 +58,7 @@ nav li ul a :hover {
 
 h1 {
   font-size: 2.5rem;
-  color: #01762F;
+  color: var(--green_primary);
   margin-bottom: 20px;
 }
 
@@ -64,20 +71,115 @@ h1 {
   font-size: 1.5rem;
   cursor: pointer;
   margin-top: 20px;
-  border: solid 2px #01762F;
-  background-color: #01762F;
+  border: solid 2px var(--green_primary);
+  background-color: var(--green_primary);
   border: 1px solid rgba(27, 31, 35, .15);
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   border-radius: 6px;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--white);
   display: inline-block;
   font-size: 20px;
   font-weight: 600;
-  padding: 6px 16px;
+  padding: 10px 30px;
   line-height: 20px;
 }
 
 .btn_menu:hover {
-  background-color: #2c974b;
+  background-color: var(--green_secondary);
+}
+
+/* Image de la salle */
+
+.salle {
+  display: flex;
+  justify-content: center;
+  background-color: var(--green_primary);
+  margin-top: 50px;
+}
+
+.salle_img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* A propos */
+
+.us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--green_primary);
+  margin: 50px 100px;
+  padding: 20px 0px;
+  border-radius: 100px 20px 100px 20px;
+}
+
+.us_title {
+  font-size: 2rem;
+  color: var(--white);
+  margin-right: 20px;
+}
+
+.us_description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--white);
+  max-width: 600px;
+  padding-top: 10px;
+}
+
+/* Menu */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu_title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.menu_items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.menu_item_img {
+  width: 50vh;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu_item_name {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+.barre {
+  width: 120px;
+  height: 5px;
+  background-color: var(--green_primary);
+  margin: 10px 0px;
+  border-radius: 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--green_primary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
 }
