@@ -65,23 +65,23 @@
       <nav>
         <li>
           <ul>
-            <a href="#">ACCUEIL</a>
+            <a href="#accueil">ACCUEIL</a>
           </ul>
           <ul>
-            <a href="#">À PROPOS</a>
+            <a href="#a_propos">À PROPOS</a>
           </ul>
           <ul>
-            <a href="#">MENU</a>
+            <a href="#menu">MENU</a>
           </ul>
           <ul>
-            <a href="#">CONTACT</a>
+            <a href="#contact">CONTACT</a>
           </ul>
         </li>
       </nav>
     </header>
     <main>
       <section class="title">
-        <h1>Bienvenue chez Mano & Farina Pizz</h1>
+        <h1 id="accueil">Bienvenue chez Mano & Farina Pizz</h1>
         <p>Pizzas artisanales au feu de bois</p>
 
         <svg
@@ -142,7 +142,6 @@
             fill="#E5E7EB"
           />
         </svg>
-        <button class="btn_menu" id="btn_menu">Menu</button>
       </section>
       <section class="salle">
         <img
@@ -151,7 +150,7 @@
           class="salle_img"
         />
       </section>
-      <section class="us">
+      <section class="us" id="a_propos">
         <h2 class="us_title">A propos de nous :</h2>
         <p class="us_description">
           Mano & Farina Pizz, c'est la promesse d'une pizza artisanale 100 %
@@ -257,7 +256,203 @@
             </div>
           </article>
         </section>
-        <button class="btn_menu" id="btn_menu">Commander</button>
+        <button class="btn" id="btn_commander">Commander</button>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-container">
+          <!-- Colonne de gauche : Infos -->
+          <div class="contact-info">
+            <div class="contact-badge">CONTACTEZ-NOUS</div>
+
+            <h2 class="contact-title">
+              Une table, une question ?<br />
+              <span class="text-green">Écrivez-nous.</span>
+            </h2>
+
+            <p class="contact-desc">
+              Pour réserver une grande tablée, privatiser notre salle ou nous
+              poser une question sur nos recettes faites maison, notre équipe
+              vous répond dans la journée.
+            </p>
+
+            <div class="contact-list">
+              <!-- Item 1 : Adresse -->
+              <div class="contact-item">
+                <div class="icon-box">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Notre adresse</h4>
+                  <p class="item-sub">
+                    10 Rue de la Farine, 40000 MONT DE MARSAN
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 : Téléphone -->
+              <div class="contact-item">
+                <div class="icon-box">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Téléphone</h4>
+                  <p class="item-sub">05 56 12 34 56</p>
+                </div>
+              </div>
+
+              <!-- Item 3 : Horaires -->
+              <div class="contact-item">
+                <div class="icon-box">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="item-title">Heures d'ouverture</h4>
+                  <p class="item-sub">
+                    Mardi au Dimanche : 12h-14h30 / 19h-23h
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne de droite : Carte formulaire -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Envoyez-nous un message</h3>
+
+            <form action="#" method="POST" class="contact-form">
+              <!-- Ligne 1 : Nom & Email -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nom complet</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ex: Mario Rossi"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Adresse e-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="mario@exemple.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Ligne 2 : Objet -->
+              <div class="form-group">
+                <label for="subject">Objet de votre message</label>
+                <div class="select-wrapper">
+                  <select id="subject" name="subject">
+                    <option value="reservation">
+                      Réservation d'une table (groupe)
+                    </option>
+                    <option value="privatisation">
+                      Privatisation de salle
+                    </option>
+                    <option value="question">
+                      Question sur le menu / allergènes
+                    </option>
+                    <option value="autre">Autre demande</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Ligne 3 : Message -->
+              <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Détaillez votre demande (date, nombre de convives...)"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Bouton Submit -->
+              <button type="submit" class="submit-btn">
+                Envoyer le message
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+
+              <!-- Mention de confidentialité -->
+              <div class="privacy-note">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                <span
+                  >Vos informations sont confidentielles et ne sont jamais
+                  partagées.</span
+                >
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
