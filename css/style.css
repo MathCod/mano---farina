@@ -473,21 +473,118 @@ footer {
 
 /* --- Responsive --- */
 
-@media (max-width: 900px) {
+/* 1. Écrans moyens / Tablettes (moins de 992px) */
+@media (max-width: 992px) {
+  .us {
+    margin: 40px 30px;
+    border-radius: 50px 15px 50px 15px;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
+  .salle_img {
+    width: 80%;
+  }
+}
+
+/* 2. Smartphones et tablettes verticales (moins de 768px) */
+@media (max-width: 768px) {
+  /* Navigation mobile */
+  header {
+    flex-direction: column;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  nav li {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav li ul a {
+    font-size: 0.85rem;
+  }
+
+  /* Titre principal */
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .title p {
+    font-size: 1.15rem;
+  }
+
+  .title .logo {
+    max-width: 160px;
+  }
+
+  /* Image de salle */
+  .salle {
+    display: none;
+  }
+
+  /* À propos */
+  .us {
+    margin: 30px 15px;
+    padding: 30px 20px;
+    border-radius: 30px 10px 30px 10px;
+  }
+
+  .us_title {
+    font-size: 1.6rem;
+  }
+
+  .us_description {
+    font-size: 1rem;
+  }
+
+  /* Menu en 1 seule colonne */
+  .menu_items {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* Formulaire */
   .contact-title {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .contact-form-card {
-    padding: 32px 24px;
+    padding: 28px 18px;
+    border-radius: 20px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+}
+
+/* 3. Très petits smartphones (moins de 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  .title p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
+  .contact-section {
+    padding: 40px 14px;
+  }
+
+  .contact-title {
+    font-size: 24px;
   }
 }
