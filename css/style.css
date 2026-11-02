@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
 html {
-  scroll-padding-top: 140px; 
-  scroll-behavior: smooth; 
+  scroll-padding-top: 140px;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
 * {
@@ -44,6 +45,7 @@ header {
 .navbar_logo {
   height: 10vh;
   width: auto;
+  max-width: 100%;
   display: block;
 }
 
@@ -77,6 +79,9 @@ nav ul li a:hover {
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-size: 2.5rem;
   color: var(--green_primary);
   margin-bottom: 20px;
@@ -118,13 +123,15 @@ h1 {
   display: flex;
   justify-content: center;
   background-color: var(--green_primary);
-  margin-top: 50px;
+  margin: 50px 80px;
+  border-radius: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hall_img {
-  width: 50%;
+  width: 40%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 40px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -135,26 +142,23 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--green_primary);
+  max-width: 400px;
   margin: 50px 100px;
-  padding: 20px 0px;
-  border-radius: 100px 20px 100px 20px;
 }
 
 .us_title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: var(--white);
-  margin-right: 20px;
+  padding-bottom: 20px;
 }
 
 .us_description {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--white);
   max-width: 600px;
-  padding-top: 10px;
 }
 
 /* Menu */
@@ -174,6 +178,7 @@ h1 {
 .menu_items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  place-items: center;
   gap: 50px;
 }
 
@@ -181,6 +186,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 90%;
   padding: 20px;
   border-radius: 10px;
   background-color: var(--bg_secondary);
@@ -189,6 +195,7 @@ h1 {
 
 .menu_item_img {
   width: 50vh;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -199,12 +206,18 @@ h1 {
   margin-top: 8px;
 }
 
-.barre {
+.bar {
   width: 120px;
   height: 5px;
   background-color: var(--green_primary);
   margin: 10px 0px;
   border-radius: 20px;
+}
+
+.menu_item_description {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .menu_item_price {
@@ -489,6 +502,9 @@ footer {
 
 /* 1. Écrans moyens / Tablettes (moins de 992px) */
 @media (max-width: 992px) {
+  nav ul li a {
+    font-size: 0.8rem;
+  }
   .us {
     margin: 40px 30px;
     border-radius: 50px 15px 50px 15px;
@@ -511,6 +527,10 @@ footer {
     flex-direction: column;
     gap: 14px;
     padding: 12px;
+  }
+
+  nav ul {
+    margin: 0;
   }
 
   nav li {
@@ -537,15 +557,13 @@ footer {
   }
 
   /* Image de salle */
-  .hall {
+  .hall_img {
     display: none;
   }
 
-  /* À propos */
-  .us {
-    margin: 30px 15px;
-    padding: 30px 20px;
-    border-radius: 30px 10px 30px 10px;
+  .hall {
+    margin: 20px 20px;
+    border-radius: 20px;
   }
 
   .us_title {
@@ -561,7 +579,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 25px;
     width: 100%;
-    max-width: 360px;
+    max-width: 768px;
   }
 
   /* Formulaire */
