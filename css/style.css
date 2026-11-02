@@ -37,14 +37,15 @@ header {
   display: block;
 }
 
-nav li {
+nav ul {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-right: 50px;
+  list-style-type: none;
 }
 
-nav li ul a {
+nav ul li a {
   font-size: 1rem;
   text-decoration: none;
   font-weight: 900;
@@ -52,7 +53,7 @@ nav li ul a {
   display: inline-block;
 }
 
-nav li ul a :hover {
+nav ul li a :hover {
   color: var(--green_primary);
 }
 
@@ -316,7 +317,7 @@ footer {
 .item-sub {
   margin: 0;
   font-size: 13.5px;
-  color: #64748b;
+  color: var(--black);
 }
 
 /* --- Colonne de droite (Formulaire) --- */
@@ -463,12 +464,12 @@ footer {
   justify-content: center;
   gap: 8px;
   font-size: 12px;
-  color: #8fa0af;
+  color: var(--black);
   margin-top: 4px;
 }
 
 .privacy-note svg {
-  stroke: #8fa0af;
+  stroke: var(--);
 }
 
 /* --- Responsive --- */
