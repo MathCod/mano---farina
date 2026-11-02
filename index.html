@@ -144,11 +144,11 @@
           />
         </svg>
       </section>
-      <section class="salle">
+      <section class="hall">
         <img
           src="assets/salle.webp"
           alt="Salle de la pizzeria"
-          class="salle_img"
+          class="hall_img"
         >
       </section>
       <section class="us" id="a_propos">
@@ -178,13 +178,13 @@
             </p>
             <span class="menu_item_price">12.00€</span>
             <div
-              class="quantity-picker"
+              class="qty_picker"
               tabindex="0"
               role="button"
               aria-label="Sélectionner la quantité"
             >
               <span>Quantité : 1</span>
-              <span class="qty-arrow">▼</span>
+              <span class="qty_arrow">▼</span>
             </div>
           </article>
 
@@ -201,13 +201,13 @@
             </p>
             <span class="menu_item_price">14.00€</span>
             <div
-              class="quantity-picker"
+              class="qty_picker"
               tabindex="0"
               role="button"
               aria-label="Sélectionner la quantité"
             >
               <span>Quantité : 1</span>
-              <span class="qty-arrow">▼</span>
+              <span class="qty_arrow">▼</span>
             </div>
           </article>
 
@@ -224,13 +224,13 @@
             </p>
             <span class="menu_item_price">14.00€</span>
             <div
-              class="quantity-picker"
+              class="qty_picker"
               tabindex="0"
               role="button"
               aria-label="Sélectionner la quantité"
             >
               <span>Quantité : 1</span>
-              <span class="qty-arrow">▼</span>
+              <span class="qty_arrow">▼</span>
             </div>
           </article>
 
@@ -247,13 +247,13 @@
             </p>
             <span class="menu_item_price">11.00€</span>
             <div
-              class="quantity-picker"
+              class="qty_picker"
               tabindex="0"
               role="button"
               aria-label="Sélectionner la quantité"
             >
               <span>Quantité : 1</span>
-              <span class="qty-arrow">▼</span>
+              <span class="qty_arrow">▼</span>
             </div>
           </article>
         </section>
@@ -358,7 +358,7 @@
             <form action="#" method="POST" class="contact-form">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Nom complet</label>
+                  <label for="name">Nom complet*</label>
                   <input
                     type="text"
                     id="name"
@@ -368,7 +368,7 @@
                   >
                 </div>
                 <div class="form-group">
-                  <label for="email">Adresse e-mail</label>
+                  <label for="email">Adresse e-mail*</label>
                   <input
                     type="email"
                     id="email"
@@ -380,7 +380,7 @@
               </div>
 
               <div class="form-group">
-                <label for="subject">Objet de votre message</label>
+                <label for="subject">Objet de votre message*</label>
                 <div class="select-wrapper">
                   <select id="subject" name="subject">
                     <option value="reservation">
@@ -398,7 +398,7 @@
               </div>
 
               <div class="form-group">
-                <label for="message">Votre message</label>
+                <label for="message">Votre message*</label>
                 <textarea
                   id="message"
                   name="message"

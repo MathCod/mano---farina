@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
+html {
+  scroll-padding-top: 140px; 
+  scroll-behavior: smooth; 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,12 +18,13 @@
 
 :root {
   /* Variables Couleurs */
-  --green_primary: #01762f;
-  --green_secondary: #08ae37;
+  --green_primary: #247545;
+  --green_secondary: #1da844;
   --black: #000000;
   --white: #ffffff;
   --grey: #ced2db;
-  --bg_form: #f2f5f2;
+  --bg_primary: #f2f5f2;
+  --bg_secondary: #d8edd9;
 }
 
 /* Header */
@@ -27,8 +33,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg_primary);
 }
 
 .navbar_logo {
@@ -53,8 +63,8 @@ nav ul li a {
   display: inline-block;
 }
 
-nav ul li a :hover {
-  color: var(--green_primary);
+nav ul li a:hover {
+  color: var(--green_secondary);
 }
 
 /* Titre - Logo - bouton menu */
@@ -93,6 +103,9 @@ h1 {
   font-weight: 600;
   padding: 10px 30px;
   line-height: 20px;
+    transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 
 .btn:hover {
@@ -101,14 +114,14 @@ h1 {
 
 /* Image de la salle */
 
-.salle {
+.hall {
   display: flex;
   justify-content: center;
   background-color: var(--green_primary);
   margin-top: 50px;
 }
 
-.salle_img {
+.hall_img {
   width: 50%;
   height: auto;
   border-radius: 10px;
@@ -170,7 +183,7 @@ h1 {
   align-items: center;
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--grey);
+  background-color: var(--bg_secondary);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -199,7 +212,7 @@ h1 {
   font-weight: bold;
 }
 
-.quantity-picker {
+.qty_picker {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -213,7 +226,7 @@ h1 {
   cursor: pointer;
 }
 
-.qty-arrow {
+.qty_arrow {
   font-size: 0.7rem;
 }
 
@@ -229,7 +242,7 @@ footer {
 /* Section Formulaire */
 
 .contact-section {
-  background-color: var(--bg_form);
+  background-color: var(--bg_primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,8 +264,8 @@ footer {
 
 .contact-badge {
   display: inline-block;
-  background-color: #d8edd9;
-  color: #066838;
+  background-color: var(--bg_secondary);
+  color: var(--green_primary);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -265,19 +278,19 @@ footer {
   font-size: 38px;
   line-height: 1.15;
   font-weight: 800;
-  color: #0c1825;
+  color: var(--black);
   margin: 0 0 24px 0;
   letter-spacing: -0.5px;
 }
 
 .contact-title .text-green {
-  color: #06783d;
+  color: var(--green_primary);
 }
 
 .contact-desc {
   font-size: 15px;
   line-height: 1.6;
-  color: #556370;
+  color: var(--black);
   margin: 0 0 40px 0;
   max-width: 440px;
 }
@@ -298,8 +311,8 @@ footer {
 .icon-box {
   width: 44px;
   height: 44px;
-  background-color: #dff0e2;
-  color: #06783d;
+  background-color: var(--bg_secondary);
+  color: var(--green_primary);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -311,7 +324,7 @@ footer {
   margin: 0 0 4px 0;
   font-size: 14px;
   font-weight: 700;
-  color: #0c1825;
+  color: var(--black);
 }
 
 .item-sub {
@@ -323,7 +336,7 @@ footer {
 /* --- Colonne de droite (Formulaire) --- */
 
 .contact-form-card {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 48px;
   border-radius: 28px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
@@ -333,7 +346,7 @@ footer {
 .form-title {
   font-size: 24px;
   font-weight: 800;
-  color: #0c1825;
+  color: var(--black);
   margin: 0 0 28px 0;
   letter-spacing: -0.3px;
 }
@@ -359,7 +372,7 @@ footer {
 .form-group label {
   font-size: 13.5px;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--black);
 }
 
 /* Inputs, Select, Textarea */
@@ -369,12 +382,12 @@ footer {
 .form-group select {
   width: 100%;
   padding: 13px 16px;
-  background-color: #fbfcfc;
-  border: 1px solid #e2e8f0;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
   border-radius: 12px;
   font-size: 14px;
   font-family: inherit;
-  color: #0f172a;
+  color: var(--black);
   outline: none;
   box-sizing: border-box;
   transition:
@@ -390,8 +403,8 @@ footer {
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: #06783d;
-  background-color: #ffffff;
+  border-color: var(--green_primary);
+  background-color: var(--white);
   box-shadow: 0 0 0 3px rgba(6, 120, 61, 0.12);
 }
 
@@ -429,8 +442,8 @@ footer {
 /* Bouton d'envoi */
 
 .submit-btn {
-  background-color: #06783d;
-  color: #ffffff;
+  background-color: var(--green_primary);
+  color: var(--white);
   border: none;
   border-radius: 12px;
   padding: 15px 24px;
@@ -449,7 +462,7 @@ footer {
 }
 
 .submit-btn:hover {
-  background-color: #056634;
+  background-color: var(--green_secondary);
 }
 
 .submit-btn:active {
@@ -486,7 +499,7 @@ footer {
     gap: 40px;
   }
 
-  .salle_img {
+  .hall_img {
     width: 80%;
   }
 }
@@ -524,7 +537,7 @@ footer {
   }
 
   /* Image de salle */
-  .salle {
+  .hall {
     display: none;
   }
 
