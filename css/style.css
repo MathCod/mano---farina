@@ -42,6 +42,15 @@ header {
   background-color: var(--bg_primary);
 }
 
+.bar_nav {
+  width: 300px;
+  height: 3px;
+  background-color: var(--green_primary);
+  margin: 0;
+  border-radius: 20px;
+  display: none;
+}
+
 .navbar_logo {
   height: 10vh;
   width: auto;
@@ -525,10 +534,18 @@ footer {
 /* 2. Smartphones et tablettes verticales (moins de 768px) */
 @media (max-width: 768px) {
   /* Navigation mobile */
+  html {
+    scroll-padding-top: 150px;
+  }
+
   header {
     flex-direction: column;
     gap: 14px;
     padding: 12px;
+  }
+
+  .bar_nav {
+    display: block;
   }
 
   nav ul {
